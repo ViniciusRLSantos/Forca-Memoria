@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://b2cr42l3cixg6"]
+
+[ext_resource type="Script" path="res://Scripts/figura_palito.gd" id="1_0eljj"]
+[ext_resource type="Texture2D" uid="uid://byj7ps7akmwsi" path="res://Assets/body.png" id="2_u1ltt"]
+[ext_resource type="Texture2D" uid="uid://ce7nb6dfkn4b2" path="res://Assets/head.png" id="3_kkyxp"]
+[ext_resource type="Texture2D" uid="uid://bvy8ohhipn5oc" path="res://Assets/arm_left.png" id="4_7di1m"]
+[ext_resource type="Texture2D" uid="uid://dmbgcrmst0od7" path="res://Assets/arm_right.png" id="5_3o57h"]
+[ext_resource type="Texture2D" uid="uid://drfyogcycxa7a" path="res://Assets/leg_left.png" id="6_qmv38"]
+[ext_resource type="Texture2D" uid="uid://b56gs5oorsl0o" path="res://Assets/leg_right.png" id="7_v3qxo"]
+[ext_resource type="Texture2D" uid="uid://cjb2m0gi41os0" path="res://Assets/eye_left.png" id="8_hocnh"]
+[ext_resource type="Texture2D" uid="uid://7hi2cc6gnw5l" path="res://Assets/eye_right.png" id="9_rbjtw"]
+[ext_resource type="Texture2D" uid="uid://1glxuwmb55bq" path="res://Assets/hang.png" id="10_dd7ox"]
+
+[node name="FiguraPalito" type="Node2D"]
+position = Vector2(370, 51)
+script = ExtResource("1_0eljj")
+
+[node name="Body" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-309, 14)
+texture = ExtResource("2_u1ltt")
+
+[node name="Head" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-310, 23)
+texture = ExtResource("3_kkyxp")
+
+[node name="ArmLeft" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-322, 24)
+texture = ExtResource("4_7di1m")
+
+[node name="ArmRight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-310, 16)
+texture = ExtResource("5_3o57h")
+
+[node name="LegLeft" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-305, 28)
+texture = ExtResource("6_qmv38")
+
+[node name="LegRight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-302, 29)
+texture = ExtResource("7_v3qxo")
+
+[node name="EyeLeft" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-311, 28)
+texture = ExtResource("8_hocnh")
+
+[node name="EyeRight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-304, 29)
+texture = ExtResource("9_rbjtw")
+
+[node name="Hang" type="Sprite2D" parent="."]
+position = Vector2(-324, 20)
+texture = ExtResource("10_dd7ox")

@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bm88pxd5evv4s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nj2sm"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+emission_energy_multiplier = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdocf"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="Curve" id="Curve_prskj"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.636364, 0.536842), -1.71111, -1.71111, 0, 0, Vector2(1, 0), -2.93816, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ai7ed"]
+curve = SubResource("Curve_prskj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qxqhm"]
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 15.0
+damping_min = 15.0
+damping_max = 15.0
+scale_min = 5.0
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_ai7ed")
+turbulence_noise_strength = 7.07
+turbulence_noise_scale = 3.72
+turbulence_noise_speed_random = 2.09
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_he1vm"]
+diffuse_mode = 3
+specular_mode = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_x11o0"]
+material = SubResource("StandardMaterial3D_he1vm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tivxi"]
+transparency = 1
+cull_mode = 1
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_dpfhq"]
+material = SubResource("StandardMaterial3D_tivxi")
+
+[node name="Explosion" type="GPUParticles3D"]
+material_override = SubResource("StandardMaterial3D_nj2sm")
+material_overlay = SubResource("StandardMaterial3D_gdocf")
+amount = 50
+explosiveness = 0.5
+process_material = SubResource("ParticleProcessMaterial_qxqhm")
+draw_passes = 2
+draw_pass_1 = SubResource("SphereMesh_x11o0")
+draw_pass_2 = SubResource("SphereMesh_dpfhq")

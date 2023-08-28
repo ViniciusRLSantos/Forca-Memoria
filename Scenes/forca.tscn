@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0oyhli4wgvth"]
+
+[ext_resource type="Script" path="res://Scripts/Forca.gd" id="1_a5q5a"]
+[ext_resource type="FontFile" uid="uid://kasfldpixqsw" path="res://Assets/BadComic-Regular.ttf" id="2_b85i5"]
+[ext_resource type="PackedScene" uid="uid://b2cr42l3cixg6" path="res://Scenes/Objects/figura_palito.tscn" id="2_nexba"]
+[ext_resource type="AudioStream" uid="uid://dt1f45xy7qxun" path="res://Assets/Sounds/Acertou.mp3" id="4_hebxh"]
+[ext_resource type="AudioStream" uid="uid://p4gdc044um40" path="res://Assets/Sounds/Errou.mp3" id="5_suuyp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oofew"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_4we2c"]
+font = ExtResource("2_b85i5")
+font_size = 20
+
+[node name="Forca" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a5q5a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.52549)
+
+[node name="Palavra" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -553.0
+offset_top = 42.0
+offset_right = 553.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_b85i5")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+autowrap_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -231.0
+offset_right = 96.0
+offset_bottom = -162.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+alignment = 1
+max_length = 1
+
+[node name="LetrasUsadas" type="Label" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 21.0
+offset_right = 1227.0
+offset_bottom = 108.0
+label_settings = SubResource("LabelSettings_oofew")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MudarPalavra" type="Timer" parent="."]
+one_shot = true
+
+[node name="FiguraPalito" parent="." instance=ExtResource("2_nexba")]
+position = Vector2(346, 191)
+scale = Vector2(0.395, 0.395)
+
+[node name="Dica" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_4we2c")
+horizontal_alignment = 1
+
+[node name="Acerto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hebxh")
+
+[node name="Erro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_suuyp")
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="timeout" from="MudarPalavra" to="." method="_on_mudar_palavra_timeout"]

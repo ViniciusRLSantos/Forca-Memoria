@@ -1,0 +1,153 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ubp0ibjtcm5"]
+
+[ext_resource type="PackedScene" uid="uid://cjxe014duslye" path="res://brain.glb" id="1_ne5ip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6181i"]
+transparency = 1
+blend_mode = 1
+depth_draw_mode = 2
+diffuse_mode = 3
+albedo_color = Color(1, 0.603922, 1, 1)
+
+[node name="brain" instance=ExtResource("1_ne5ip")]
+transform = Transform3D(0.406586, 0, -0.406586, 0, 0.575, 0, 0.406586, 0, 0.406586, 0, 0, 0)
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(0.295, 0, 0, 0, -1.28949e-08, 0.295, 0, -0.295, -1.28949e-08, 0, 0, 0)
+
+[node name="2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" parent="Sketchfab_model" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -264, -292, 66)
+
+[node name="Object_2" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="0"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+
+[node name="Object_3" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="1"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_4" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="2"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_5" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="3"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_6" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="4"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_7" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="5"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_8" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="6"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_9" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="7"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_10" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="8"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_11" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="9"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_12" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="10"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_13" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="11"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_14" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="12"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_15" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="13"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_16" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="14"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_17" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="15"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_18" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="16"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_19" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="17"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_20" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="18"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_21" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="19"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_22" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="20"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_23" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="21"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_24" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="22"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_25" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="23"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_26" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="24"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_27" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="25"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true
+
+[node name="Object_28" parent="Sketchfab_model/2023-07-04-11-34-57_stl_cleaner_materialmerger_gles" index="26"]
+material_override = SubResource("StandardMaterial3D_6181i")
+cast_shadow = 0
+ignore_occlusion_culling = true

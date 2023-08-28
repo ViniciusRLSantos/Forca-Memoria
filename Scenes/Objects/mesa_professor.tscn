@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b78xlijiu8fox"]
+
+[ext_resource type="PackedScene" uid="uid://cj8g2hkacga17" path="res://Models/mesa_professor.glb" id="1_7bc1o"]
+
+[node name="mesa_professor" instance=ExtResource("1_7bc1o")]
