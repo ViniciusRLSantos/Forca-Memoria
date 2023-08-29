@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0oyhli4wgvth"]
+[gd_scene load_steps=10 format=3 uid="uid://b0oyhli4wgvth"]
 
 [ext_resource type="Script" path="res://Scripts/Forca.gd" id="1_a5q5a"]
 [ext_resource type="FontFile" uid="uid://kasfldpixqsw" path="res://Assets/BadComic-Regular.ttf" id="2_b85i5"]
@@ -12,6 +12,12 @@ font_size = 36
 [sub_resource type="LabelSettings" id="LabelSettings_4we2c"]
 font = ExtResource("2_b85i5")
 font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rflf"]
+bg_color = Color(0, 0, 0, 0.705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oaph6"]
+bg_color = Color(0.207843, 0.231373, 0.337255, 1)
 
 [node name="Forca" type="Control"]
 layout_mode = 3
@@ -101,6 +107,34 @@ stream = ExtResource("4_hebxh")
 
 [node name="Erro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_suuyp")
+
+[node name="Tempo" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -211.0
+offset_right = 285.0
+offset_bottom = -163.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_b85i5")
+theme_override_styles/background = SubResource("StyleBoxFlat_8rflf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_oaph6")
+value = 87.38
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 463.0
+offset_right = 255.0
+offset_bottom = 503.0
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[shake][center]Tempo"
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="timeout" from="MudarPalavra" to="." method="_on_mudar_palavra_timeout"]

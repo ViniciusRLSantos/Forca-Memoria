@@ -36,10 +36,9 @@ func _on_teacher_animation_animation_finished(anim_name):
 				"AAAAH JÁ SEI",
 				"VOCÊ ACHA QUE JÁ SABE DE TUDO NÃO É!!!!",
 				"QUE TAL ASSIM...",
-				"VOCÊ TEM 8 CHANCES PARA ACERTAR MINHAS PERGUNTAS. SE ERRAR MAIS QUE ISSO VOCÊ SERÁ SUSPENSO!!!",
+				"VOCÊ TEM 8 CHANCES PARA ACERTAR MINHAS PERGUNTAS. SE ERRAR MAIS QUE ISSO OU DEMORAR DEMAIS PRA RESPONDER, VOCÊ SERÁ SUSPENSO!!!",
 				"HAHAHAHA PUNIÇÃO MAIS JUSTA QUE ESSA NÃO TEM."
 			], "Prof. Chatonilson")
-			
 
 func _on_aluno_dialogue_finished():
 	$TeacherAnimation.play("Camera Tilt")

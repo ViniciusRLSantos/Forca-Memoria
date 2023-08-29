@@ -37,6 +37,9 @@ var pontos = 0
 @onready var figura = $FiguraPalito
 @onready var figura_corpo = [figura.head, figura.eye_left, figura.eye_right, figura.body, figura.arm_left, figura.arm_right, figura.leg_left, figura.leg_right]
 @onready var mudar_palavra_timer = $MudarPalavra
+@onready var tempo_progresso = $Tempo
+@export var tempo_velocidade: float = 0.025
+var tempo_comecar = true
 
 # Sinais que o jogo irá emitir para outras cenas
 signal derrota()
@@ -46,6 +49,7 @@ signal vitoria()
 func _ready():
 	randomize()
 	terminou = false
+	tempo_comecar = true
 	var indice_aleatorio
 	if not termos.is_empty():
 		indice_aleatorio = randi() % termos.size()
@@ -72,8 +76,14 @@ func _process(delta):
 	if erros > 0:
 		figura_corpo[(erros-1) % figura_corpo.size()].visible = true
 	
+	# Uma maneira de diminuir o tempo sem usar if/else
+	tempo_progresso.value -= tempo_velocidade * int(tempo_comecar)
+	
 	# Condição de derrota
 	if erros > figura_corpo.size():
+		derrota.emit()
+	if tempo_progresso.value <= 0:
+		tempo_comecar = false
 		derrota.emit()
 	
 	# Display dos textos
@@ -84,6 +94,7 @@ func _process(delta):
 	if palavra_secreta.count("*") <= 0:
 		if not terminou:
 			terminou = true
+			tempo_comecar = false
 			$Acerto.play()
 			$MudarPalavra.start()
 
@@ -122,6 +133,7 @@ func resetar_palavra():
 		secret_word = []
 		palavra_validar = ""
 		letras_usadas = []
+		tempo_progresso.value = 100
 		termos.erase(palavra_escolhida)
 		dicas.erase(dica)
 		_ready()
